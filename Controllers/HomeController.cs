@@ -10,5 +10,11 @@ public class HomeController : Controller
         ViewBag.ListaPaises=Info.ListarPaises();
         return View();
     }
-   // public IActionResult DetallePais(string pais)
+   public IActionResult DetallePais(string paisBuscado){
+        ViewBag.Pais=Info.ListarPaises();
+        foreach(string item in Info.ListarPaises().){
+
+        }
+        
+   }
 }
