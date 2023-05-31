@@ -1,2 +1,9 @@
-<h1>Paises</h1>
+<header>
+    <h1><a href='@Url.Action("Index")'>Paises</a></h1>
+
+</header>
 <h2>@ViewBag.Pais.Nombre</h2>
+<img src="/imagenes/@ViewBag.Pais.imgBandera">
+<h3>Población: @ViewBag.Pais.Poblacion</h3>
+<h3>Fecha patria mas importante: @ViewBag.Pais.FechaHistorica</h3>
+<h3>Atractivos turísticos: @ViewBag.Pais.AtractivosTuristicos</h3>

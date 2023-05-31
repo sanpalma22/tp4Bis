@@ -1,9 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
+<header>
+    <h1><a href='@Url.Action("Index")'>Paises</a></h1>
 
-<h1>Paises</h1>
+</header>
+
 @foreach (Pais item in ViewBag.ListaPaises)
 {
-    <a href='@Url.Action("DetallePais", new {Pais = item.Nombre})'><img src="/imagenes/@item.imgBandera"></a>
+    <div>
+        <h3>@item.Nombre</h3>
+        <a href='@Url.Action("DetallePais", new {paisBuscado = item.Nombre})'><img src="/imagenes/@item.imgBandera"></a>
+    </div>
 }
